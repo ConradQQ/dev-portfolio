@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+
+<main>
+  <header class="flex flex-row fixed h-40 justify-between md:flex-row">
+    <img src="../img/logo.svg" class="w-60 mx-auto pt-5 md:my-auto " alt="Deveolper Headshot illustration">
+    <nav id="nav" class="container pl-36 my-auto relative mx-auto text-white text-2xl">
+      <!-- Links Container -->
+    <div id="nav-items" class="hidden md:flex md:flex-row md:justify-end md:space-x-6 ">
+      <a href="#" class="p-3 active hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Home</a>
+      <a href="#" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Contact</a>
+      <a href="#" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">About</a>
+      <a href="#" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">My Work</a>
+    </div>
+      <!-- Hamburger Menu -->
+      <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+       </button>
+      <!-- Mobile Menu -->
+       <div class="md:hidden">
+        <div 
+        id="menu" 
+        class="hidden absolute flex-col mx-auto items-center self-end mt-10 space-y-6 font-bold bg-transparent sm:w-auto sm:self-center left-6 right-6 drop-shadow-md text-white">
+         <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Home</a>
+         <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Contact</a>
+         <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">About</a>
+         <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">My Work</a>
+        </div>
+       </div>
+    </nav>
+  </header>
+  
+
+</main>
+<script src="./js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+      $('#nav-items > a')
+              .click(function (e) {
+          $('#nav-items > a')
+              .removeClass('active');
+          $(this).addClass('active');
+      })
+  });
+</script>
+</body>
+</html>
