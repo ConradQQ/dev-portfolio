@@ -6,49 +6,76 @@
   <link href="/dist/output.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Silkscreen&display=swap" rel="stylesheet">
 </head>
-<body>
-  
 
-<main>
-  <header class="flex flex-row fixed h-40 justify-between md:flex-row">
-    <img src="../img/logo.svg" class="w-60 mx-auto pt-5 md:my-auto " alt="Deveolper Headshot illustration">
-    <nav id="nav" class="container pl-36 my-auto relative mx-auto text-white text-2xl">
-      <!-- Links Container -->
-    <div id="nav-items" class="hidden md:flex md:flex-row md:justify-end md:space-x-6 ">
-      <a href="#" class="p-3 active hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Home</a>
-      <a href="#" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Contact</a>
-      <a href="#" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">About</a>
-      <a href="#" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">My Work</a>
-    </div>
-      <!-- Hamburger Menu -->
-      <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+<body class="flex flex-col justify-start space-y-20">
+  <!-- Intro Image Container -->
+<!-- <div class="pt-50 absolute top-[15%] md:top-[15%]">
+  <img id="intro-img" src="../img/logo.svg" class="w-3/4 h-3/4 mx-auto md:w-1/2 md:h-1/2" alt="Deveolper Headshot illustration">
+</div> -->
+
+<!-- Header -->
+<header class="flex flex-col sticky top-0 h-40 px-10 justify-between text-center md:flex-row">
+  <!-- <img src="../img/logo.svg" class="w-9/12 h-fit mx-auto pt-5 md:my-auto md:block md:w-1/6 md:h-fit" alt="Deveolper Headshot illustration"> -->
+
+  <!-- Page Title -->
+  <div id="title" class="flex flex-row justify-center align-middle my-auto text-3xl ">
+    <h1><span class="">Conradqq</span><span class="" style="color:#dc15f7;">.io</span></h1>
+  </div>
+  <!-- Navbar -->
+  <nav id="nav" class="space-y-5 flex flex-col justify-center container my-auto relative mx-auto text-white text-lg md:text-xl">
+
+    <!-- Links Container -->
+  <div id="nav-items" class="hidden text-lg md:flex md:flex-row md:justify-end md:space-x-6">
+    <a href="./index.html" class="p-3 active hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Home</a>
+    <a href="#contact" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Contact</a>
+    <a href="#about" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">About</a>
+    <a href="#projects" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Projects</a>
+  </div>
+
+    <!-- Hamburger Menu -->
+    <div class="mx-auto pl-19  md:hidden">
+      <button id="menu-btn" class="block hamburger focus:outline-none">
         <span class="hamburger-top"></span>
         <span class="hamburger-middle"></span>
         <span class="hamburger-bottom"></span>
-       </button>
-      <!-- Mobile Menu -->
-       <div class="md:hidden">
-        <div 
-        id="menu" 
-        class="hidden absolute flex-col mx-auto items-center self-end mt-10 space-y-6 font-bold bg-transparent sm:w-auto sm:self-center left-6 right-6 drop-shadow-md text-white">
-         <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Home</a>
-         <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Contact</a>
-         <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">About</a>
-         <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">My Work</a>
-        </div>
-       </div>
-    </nav>
-  </header>
-  
+      </button>
+    </div>
 
+    <!-- Mobile Menu -->
+     <div class="md:hidden ml-60">
+      <div 
+      id="menu" 
+      class="hidden absolute flex-col mx-auto items-center self-end space-y-6 font-bold bg-transparent sm:w-auto sm:self-center left-6 right-6 drop-shadow-md text-slate-100">
+       <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Home</a>
+       <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Contact</a>
+       <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">About</a>
+       <a href="" class="p-3 hover:bg-slate-100 hover:rounded-full hover:text-black hover:bg-contain">Projects</a>
+      </div>
+     </div>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main id="main" class="flex flex-col ">
+  <section id="about" class="flex flex-col w-full my-auto md:flex-row md:justify-end">
+    <img src="../img/logo.svg" class="w-3/4" alt="deveolper headshot illustration" />
+
+    <div>
+      <p>
+        Hello! My name's Connor, I'm a freelance web deveolper out of Philadelphia, P.A.,. 
+      </p>
+    </div>
+  </section>
 </main>
 <script src="./js/script.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-  $(document).ready(function () {
+  $(function() {
       $('#nav-items > a')
               .click(function (e) {
           $('#nav-items > a')
@@ -56,6 +83,12 @@
           $(this).addClass('active');
       })
   });
+
+  $(function() {
+    $('#intro-img').fadeIn(2400).fadeOut(2400, function() {
+      $('#main').fadeIn(1000)
+    })
+  })
 </script>
 </body>
 </html>

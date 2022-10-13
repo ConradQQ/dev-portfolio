@@ -11,8 +11,7 @@ module.exports = {
 
     extend: {
       colors: {
-        bumbleBee: '#ffd700',
-        backgroundBlue: '#022c43'
+        fuscia: '#dc15f7'
       },
     },
   },
